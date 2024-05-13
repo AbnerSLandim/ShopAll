@@ -8,7 +8,7 @@ public class ProdutoBase{
     private double precoProduto;
     private String descricaoProduto;
     //Adiciona "estoque" não sei se é Boolean ou Int
-
+    private int estoque;
     private String nomeFabricante;
     private String enderecoFabricante;
     private String telefoneFabricante;
@@ -17,9 +17,10 @@ public class ProdutoBase{
         input.close();
     }
 
-    protected void cadastraProduto() {
+    public void cadastraProduto() {
         String respostaString;
         double respostaDouble;
+        int respostaInt;
 
         System.out.println("Qual o nome do produto?");
         respostaString = input.nextLine();
@@ -34,7 +35,10 @@ public class ProdutoBase{
         respostaString = input.nextLine();
         this.setDescricaoProduto(respostaString);
 
-        //Adicionar estoque aqui
+        System.out.println("Qual a quantidade de produtos no estoque?");
+        respostaInt = input.nextInt();
+        input.nextLine();
+        this.setEstoque(respostaInt);
 
         System.out.println("Qual o nome do fabricante do produto?");
         respostaString = input.nextLine();
@@ -57,7 +61,7 @@ public class ProdutoBase{
         System.out.println("Nome: " + this.getNomeProduto());
         System.out.println("Preço: R$" + String.format("%.2f", this.getPrecoProduto()));
         System.out.println("Descrição: " + this.getDescricaoProduto());
-        //adicionar estoque
+        System.out.println("Estoque: " + this.getEstoque());
         System.out.println("Fabricante: " + this.getNomeFabricante());
         System.out.println("Endereço Fabricante: " + this.getEnderecoFabricante());
         System.out.println("Telefone Fabricante: " + this.getTelefoneFabricante());
@@ -99,6 +103,14 @@ public class ProdutoBase{
     }
     public void setPrecoProduto(double precoProduto) {
         this.precoProduto = precoProduto;
+    }
+
+    public int getEstoque() {
+        return estoque;
+    }
+
+    public void setEstoque(int estoque) {
+        this.estoque = estoque;
     }
 
 

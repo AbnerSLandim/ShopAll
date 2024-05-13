@@ -4,20 +4,7 @@ public class ProdutoAlimenticio extends ProdutoBase {
     private String dataValidade;
     private String ingredientes;
 
-    protected String getDataValidade() {
-        return dataValidade;
-    }
-    protected void setDataValidade(String dataValidade) {
-        this.dataValidade = dataValidade;
-    }
-    protected String getIngredientes() {
-        return ingredientes;
-    }
-    protected void setIngredientes(String ingredientes) {
-        this.ingredientes = ingredientes;
-    }
-
-    protected void concatenacaoString(int dia, int mes, int ano){
+    public void concatenacaoString(int dia, int mes, int ano){
 
         String palavraConcatenada, doisDigitos,  diaString, mesString, anoString;
 
@@ -69,6 +56,18 @@ public class ProdutoAlimenticio extends ProdutoBase {
         super.mostraProduto();
         System.out.println("Ingredientes: " + this.getIngredientes());
         System.out.println("Data De Validade: " + this.getDataValidade());
+    }
+    public String getDataValidade() {
+        return dataValidade;
+    }
+    public void setDataValidade(String dataValidade) {
+        this.dataValidade = dataValidade;
+    }
+    public String getIngredientes() {
+        return ingredientes;
+    }
+    public void setIngredientes(String ingredientes) {
+        this.ingredientes = ingredientes;
     }
 
 

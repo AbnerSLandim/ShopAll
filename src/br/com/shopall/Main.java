@@ -40,10 +40,6 @@ public class Main {
 
                     rodando = false;
                     inputResposta.close();
-                    produtoVestuario.fechaInput();
-                    produtoEletronico.fechaInput();
-                    produtoBebida.fechaInput();
-                    produtoAlimenticio.fechaInput();
 
                     break;
 
